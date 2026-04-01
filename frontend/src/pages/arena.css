@@ -1,0 +1,140 @@
+.arena-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.arena-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.player-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.vs-badge {
+  background: var(--primary);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+}
+
+.question-card {
+  padding: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.timer-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.timer-fill {
+  height: 100%;
+  background: var(--secondary);
+  width: 100%;
+  transition: width 1s linear;
+}
+
+.question-text {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.option-btn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+  background: rgba(138, 43, 226, 0.2);
+  border-color: var(--primary);
+  transform: scale(1.02);
+}
+
+.option-btn.selected {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.option-btn.correct {
+  background: #00ca65;
+  border-color: #00ca65;
+}
+
+.option-btn.incorrect {
+  background: #ff4757;
+  border-color: #ff4757;
+}
+
+.post-game-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.results-card {
+  padding: 4rem;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+  100% { transform: translateY(0px) scale(1); }
+}
