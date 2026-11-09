@@ -1,4 +1,4 @@
-# DuelLearn: Gamified Learning Platform 🎮📚
+# DualLearn: Gamified Learning Platform 🎮📚
 
 DuelLearn is an interactive, real-time gamified learning platform that pits users against each other in fast-paced question battles. By combining competitive matchmaking with AI-generated educational content, DuelLearn makes learning highly engaging and rewarding. 
 
